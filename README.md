@@ -38,8 +38,6 @@ We are handling with a **REGRESSION** problem, as the outcome is to predict diam
 
 - Drop columns with high correlation features (`x`, `y`, `z`)
 
-- Scaling features (`table`,`carat`,`depth`) 
-
 #### 👩🏼‍💻 Train possible models
 
 Model          |   r2  |   RMSE    | 
