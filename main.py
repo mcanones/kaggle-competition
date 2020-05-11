@@ -4,11 +4,11 @@ from src.train import trainMod
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.linear_model import LinearRegression
-from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import RandomizedSearchCV
 from lightgbm import LGBMRegressor
-from sklearn.preprocessing import StandardScaler
+#from sklearn.ensemble import GradientBoostingRegressor
+#from sklearn.preprocessing import StandardScaler
 
 def main():
 
@@ -31,7 +31,7 @@ def main():
             }
     trainMod(models, X_train, y_train, X_test, y_test)
 
-    #STEP 2 > Grid Search
+    #STEP 3 > Grid Search
     param_grid = {
     'max_depth': [6,7,8],
     'num_leaves': list(range(40,100,1)),
@@ -43,7 +43,7 @@ def main():
     print("RMSE: ", -grid_search.best_score_)
     print(grid_search.best_estimator_.get_params()) 
     
-    #Submission
+    #STEP 4 > Submission
     id_ = diamonds_test['id']
     diamonds_test.drop(columns='id', inplace=True)
     y_pred = grid_search.predict(X=diamonds_test.values)

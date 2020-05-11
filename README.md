@@ -38,6 +38,10 @@ We are handling with a **REGRESSION** problem, as the outcome is to predict diam
 
 - Drop columns with high correlation features (`x`, `y`, `z`)
 
+- Possible: correcting outlieres
+
+- Possible: scaling features
+
 #### 👩🏼‍💻 Train possible models
 
 Model          |   r2  |   RMSE    | 
@@ -49,7 +53,7 @@ Random forest |0.9802 |  552.5046 |
 
 #### ✨ Grid search of best parameters
 
-- Gradient Boosting 
+- Gradient Boosting -> Adjusting parameters provides better results than Random Forest
 
 <p align="left">
 <img src="input/thumbs_diamonds.png"  width="450" height="250"/>
