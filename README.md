@@ -49,10 +49,7 @@ Random forest |0.9802 |  552.5046 |
 
 #### ✨ Grid search of best parameters
 
-Model          |   r2  |   RMSE    | 
--------------- | ----- | --------- | 
-Gradient Boosting | - | - |
-Random forest | - | - |
+- Gradient Boosting 
 
 <p align="left">
 <img src="input/thumbs_diamonds.png"  width="450" height="250"/>
